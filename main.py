@@ -1,5 +1,5 @@
 from operations import add, subtract, multiply, divide
-from addvanced import power, square_root
+from advanced import power, square_root
 from ui import get_number, show_menu
 
 print("ברוכים הבאים למחשבון!")
