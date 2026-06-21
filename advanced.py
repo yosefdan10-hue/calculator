@@ -20,3 +20,15 @@ def	square_root(n):
 def modulo(a,b):
     "שאריות מחולק"
     return a % b
+
+def factorial(n):
+    """מחשב עצרת של מספר"""
+    if n < 0:
+        print("שגיאה: אין עצרת למספר שלילי!")
+        return
+
+    result = 1
+    for i in range(1, int(n) + 1):
+        result *= i
+
+    return result
