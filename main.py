@@ -1,5 +1,6 @@
 from operations import add, subtract, multiply, divide
 from advanced import power, square_root, factorial
+from stats import median
 from ui import get_number, show_menu
 
 print("ברוכים הבאים למחשבון!")
@@ -37,5 +38,15 @@ while True:
     elif choice == "7":
         num = get_number("הכנס מספר: ")
         print(f"תוצאה: {factorial(num)}")
+
+    elif choice == "8":
+        numbers = []
+        count = int(get_number("כמה מספרים תרצה להכניס? "))
+
+        for i in range(count):
+            num = get_number(f"הכנס מספר {i + 1}: ")
+            numbers.append(num)
+
+        print(f"תוצאה: {median(numbers)}")
     else:
         print("בחירה לא חוקית!")
