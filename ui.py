@@ -23,5 +23,6 @@ def show_menu():
     print("5. חזקה")
     print("6. שורש")
     print("7. עצרת")
+    print("8. חציון")
     print("0. יציאה")
     return input("בחר פעולה: ")
