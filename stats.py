@@ -23,3 +23,17 @@ def find_min(numbers):
     if not numbers:
         return None
     return min(numbers)
+
+def median(numbers):
+    """מחשב חציון"""
+    if not numbers:
+        return None
+
+    numbers = sorted(numbers)
+    n = len(numbers)
+    mid = n // 2
+
+    if n % 2 == 0:
+        return (numbers[mid - 1] + numbers[mid]) / 2
+
+    return numbers[mid]
