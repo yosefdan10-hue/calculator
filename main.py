@@ -1,5 +1,5 @@
-#מחשבון פשוט
-# גרסה	2.0
+# פשוט מחשבון
+# גרסה 2.0
 
 from	operations	import	add,	subtract,	multiply,	divide
 from	advanced	import	power,	square_root,	modulo
