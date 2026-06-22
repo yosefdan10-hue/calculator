@@ -24,5 +24,8 @@ def show_menu():
     print("6. שורש")
     print("7. עצרת")
     print("8. חציון")
+    print("--- היסטוריה ---")
+    print("9. הצג היסטוריה")
+    print("10. נקה היסטוריה")
     print("0. יציאה")
     return input("בחר פעולה: ")
