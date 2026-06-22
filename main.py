@@ -3,6 +3,7 @@ from advanced import power, square_root, factorial
 from stats import median
 from ui import get_number, show_menu
 from history import add_to_history, show_history, clear_history
+from constants import show_constants
 
 print("ברוכים הבאים למחשבון!")
 print("====================")
@@ -72,6 +73,9 @@ while True:
 
     elif choice == "10":
         clear_history()
+
+    elif choice == "11":
+        show_constants()
 
     else:
         print("בחירה לא חוקית!")
