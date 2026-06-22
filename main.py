@@ -2,6 +2,7 @@ from operations import add, subtract, multiply, divide
 from advanced import power, square_root, factorial
 from stats import median
 from ui import get_number, show_menu
+from history import add_to_history, show_history, clear_history
 
 print("ברוכים הבאים למחשבון!")
 print("====================")
@@ -18,26 +19,41 @@ while True:
         num2 = get_number("הכנס מספר שני: ")
 
         if choice == "1":
-            print(f"תוצאה: {add(num1, num2)}")
+            result = add(num1, num2)
+            print(f"תוצאה: {result}")
+            add_to_history(f"{num1} + {num2}", result)
 
         elif choice == "2":
-            print(f"תוצאה: {subtract(num1, num2)}")
+            result = subtract(num1, num2)
+            print(f"תוצאה: {result}")
+            add_to_history(f"{num1} - {num2}", result)
 
         elif choice == "3":
-            print(f"תוצאה: {multiply(num1, num2)}")
+            result = multiply(num1, num2)
+            print(f"תוצאה: {result}")
+            add_to_history(f"{num1} * {num2}", result)
 
         elif choice == "4":
-            print(f"תוצאה: {divide(num1, num2)}")
+            result = divide(num1, num2)
+            print(f"תוצאה: {result}")
+            add_to_history(f"{num1} / {num2}", result)
 
         elif choice == "5":
-            print(f"תוצאה: {power(num1, num2)}")
+            result = power(num1, num2)
+            print(f"תוצאה: {result}")
+            add_to_history(f"{num1} ^ {num2}", result)
 
     elif choice == "6":
         num = get_number("הכנס מספר: ")
-        print(f"תוצאה: {square_root(num)}")
+        result = square_root(num)
+        print(f"תוצאה: {result}")
+        add_to_history(f"sqrt({num})", result)
+
     elif choice == "7":
         num = get_number("הכנס מספר: ")
-        print(f"תוצאה: {factorial(num)}")
+        result = factorial(num)
+        print(f"תוצאה: {result}")
+        add_to_history(f"{num}!", result)
 
     elif choice == "8":
         numbers = []
@@ -47,6 +63,15 @@ while True:
             num = get_number(f"הכנס מספר {i + 1}: ")
             numbers.append(num)
 
-        print(f"תוצאה: {median(numbers)}")
+        result = median(numbers)
+        print(f"תוצאה: {result}")
+        add_to_history(f"חציון של {numbers}", result)
+
+    elif choice == "9":
+        show_history()
+
+    elif choice == "10":
+        clear_history()
+
     else:
         print("בחירה לא חוקית!")
