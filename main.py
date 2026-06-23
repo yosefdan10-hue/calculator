@@ -5,8 +5,10 @@ from ui import get_number, show_menu
 from history import add_to_history, show_history, clear_history
 from constants import show_constants
 
+print("*" * 30)
 print("ברוכים הבאים למחשבון!")
-print("====================")
+print("גרסה 4.0")
+print("*" * 30)
 
 while True:
     choice = show_menu()
