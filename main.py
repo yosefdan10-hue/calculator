@@ -10,6 +10,8 @@ from percentage import (
     increase_by_percent,
     decrease_by_percent
 )
+from temperature import celsius_to_fahrenheit, fahrenheit_to_celsius
+from currency import usd_to_ils, eur_to_ils
 
 print("*" * 30)
 print("ברוכים הבאים למחשבון!")
@@ -117,5 +119,20 @@ while True:
         percent = get_number("הכנס אחוז: ")
         print(f"תוצאה: {decrease_by_percent(number, percent)}")
 
+    elif choice == "18":
+        celsius = get_number("הכנס מעלות צלזיוס: ")
+        print(f"תוצאה: {celsius_to_fahrenheit(celsius)}")
+
+    elif choice == "19":
+        fahrenheit = get_number("הכנס מעלות פרנהייט: ")
+        print(f"תוצאה: {fahrenheit_to_celsius(fahrenheit)}")
+
+    elif choice == "20":
+        amount = get_number("הכנס סכום בדולרים: ")
+        print(f"תוצאה: {usd_to_ils(amount)} ש\"ח")
+
+    elif choice == "21":
+        amount = get_number("הכנס סכום ביורו: ")
+        print(f"תוצאה: {eur_to_ils(amount)} ש\"ח")
     else:
         print("בחירה לא חוקית!")

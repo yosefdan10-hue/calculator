@@ -6,3 +6,4 @@ def increase_by_percent(number, percent):
 
 def decrease_by_percent(number, percent):
     return number * (1 - percent / 100)
+
