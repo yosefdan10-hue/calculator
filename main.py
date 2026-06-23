@@ -5,6 +5,11 @@ from ui import get_number, show_menu
 from history import add_to_history, show_history, clear_history
 from constants import show_constants
 from geometry import circle_area, rectangle_area, triangle_area
+from percentage import (
+    percent_of,
+    increase_by_percent,
+    decrease_by_percent
+)
 
 print("*" * 30)
 print("ברוכים הבאים למחשבון!")
@@ -96,6 +101,21 @@ while True:
         height = get_number("הכנס גובה: ")
         result = triangle_area(base, height)
         print(f"תוצאה: {result}")
+
+    elif choice == "15":
+        number = get_number("הכנס מספר: ")
+        percent = get_number("הכנס אחוז: ")
+        print(f"תוצאה: {percent_of(number, percent)}")
+
+    elif choice == "16":
+        number = get_number("הכנס מספר: ")
+        percent = get_number("הכנס אחוז: ")
+        print(f"תוצאה: {increase_by_percent(number, percent)}")
+
+    elif choice == "17":
+        number = get_number("הכנס מספר: ")
+        percent = get_number("הכנס אחוז: ")
+        print(f"תוצאה: {decrease_by_percent(number, percent)}")
 
     else:
         print("בחירה לא חוקית!")
