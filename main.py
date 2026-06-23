@@ -4,6 +4,7 @@ from stats import median
 from ui import get_number, show_menu
 from history import add_to_history, show_history, clear_history
 from constants import show_constants
+from geometry import circle_area, rectangle_area, triangle_area
 
 print("*" * 30)
 print("ברוכים הבאים למחשבון!")
@@ -79,7 +80,22 @@ while True:
     elif choice == "11":
         show_constants()
 
+    elif choice == "12":
+        radius = get_number("הכנס רדיוס: ")
+        result = circle_area(radius)
+        print(f"תוצאה: {result}")
 
+    elif choice == "13":
+        width = get_number("הכנס רוחב: ")
+        height = get_number("הכנס גובה: ")
+        result = rectangle_area(width, height)
+        print(f"תוצאה: {result}")
+
+    elif choice == "14":
+        base = get_number("הכנס בסיס: ")
+        height = get_number("הכנס גובה: ")
+        result = triangle_area(base, height)
+        print(f"תוצאה: {result}")
 
     else:
         print("בחירה לא חוקית!")
